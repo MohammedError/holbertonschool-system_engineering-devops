@@ -1,0 +1,18 @@
+# Simple Web Stack Infrastructure
+
+## Diagram
+[Insert link to your diagram here]
+
+## Explanation
+1. **Server**: A physical or virtual machine that provides services, resources, or data to other computers (clients) over a network.
+2. **Domain Name**: A human-readable address (foobar.com) that translates into an IP address via DNS so users can find the server.
+3. **DNS Record Type**: The `www` record is a **CNAME** or **A** record pointing the domain to the server's IP address (8.8.8.8).
+4. **Web Server (Nginx)**: Receives HTTP requests from the client and serves static content or passes requests to the application server.
+5. **Application Server**: Executes the application logic/code and generates dynamic content.
+6. **Database (MySQL)**: Stores and retrieves the application data.
+7. **Communication**: Uses **HTTP/HTTPS** protocol over **TCP/IP** to transfer data between the user's browser and the server.
+
+## Issues
+* **SPOF (Single Point of Failure)**: If the server crashes, the entire website goes down.
+* **Downtime**: Maintenance or code deployment requires restarting the web server, leading to temporary unavailability.
+* **Scalability**: Cannot handle high traffic spikes as all components share the same limited resources of one server.
